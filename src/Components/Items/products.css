@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --primary-color: #783E98;
+    --secodary-color: #31419A;
+    --dark-color: #151123;
+    --black25: #C7C8C9;
+    --black10: #E9EAEA;
+    --gradient: linear-gradient(to right, var(--secodary-color), var(--primary-color));
+
+    --H1: 7.419rem;
+    --H2: 5.247rem;
+    --H3: 3.711rem;
+    --H4: 2.624rem;
+    --H5: 1.856rem;
+    --H6: 1.313rem
+}
+
+
+
+.Second-drop-container {
+    background:var(--gradient);
+    padding: 0 0 96px;
+}
+
+.first-drop-container {
+    background:var(--gradient);
+    padding: 0 0 96px 0;
+    margin:  0 0 1px 0;
+}
+
+.Second-drop-container h1 {
+    padding: 96px;
+    font-family: Cairo, Arial;
+    font-size: clamp(var(--H5), 3.4783vw + 0.3043rem, 3.711rem);
+    text-align: center;
+    color: var(--black10);
+}
+
+.first-drop-container h1 {
+    padding: 0 0 96px 0;
+    font-family: Cairo, Arial;
+    font-size: clamp(var(--H5), 3.4783vw + 0.3043rem, 3.711rem);
+    text-align: center;
+    color: var(--black10);
+}
+
+.Second_drop,
+.first_drop{
+    margin: 0 auto;
+    padding: 0 96px;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba( 25, 23, 26, 0.5 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 25%);
+}
+
+.products:hover {
+    transform: scale(1.05);
+}
+
+.products:hover .prod-img {
+    transform: scale(1.1) ;
+    backdrop-filter: none;
+}
+
+.second_drop_items,
+.first_drop_items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-items: center;
+    gap: 32px 32px;
+}
+
+.products .prod-name {
+    font-family: Cairo, Arial;
+    font-size: clamp(var(--H6), 3.4783vw + 0.3043rem, var(--H5));
+    color: var(--black10);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 38px;
+    padding: 16px 0 0 0;
+}
+
+.products .prod-img {
+    width: 100%;
+    display: flex;
+    padding: 0 auto;
+    padding: 32px 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.prod-price {
+    color: var(--black10);
+    width: 100%;
+    font-size: clamp(0.9rem, 3.4783vw + 0.3043rem, 1rem);
+    padding:  0  0 16px 0;
+}
+
+.sksk {
+    cursor: pointer;
+    width: 100%;
+    background: rgba( 25, 23, 26, 0.5 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+}
+
+.products p {
+    font-family: Poppins, Arial;
+    width: 100%;
+}
+
+/*Responsive*/
+
+@media (max-width: 1024px) {
+    .Second-drop-container {
+        padding: 0 0 64px 0;
+    }
+
+    .first-drop-container {
+        background:var(--gradient);
+        padding: 0 0 64px 0;
+        
+    }
+
+    .Second_drop,
+    .first_drop
+    {
+    padding: 0 64px;
+    }
+
+    .Second-drop-container h1 {
+        padding: 32px;
+    }
+    
+    .first-drop-container h1 {
+        padding: 0 0 32px 0;
+    }
+
+}
+
+@media (max-width: 815px) {
+    
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+    .Second_drop,
+    .first_drop
+    {
+    padding: 0 32px;
+    }
+
+    .first-drop-container {
+        padding: 0 0 64px 0
+    }
+
+    .Second-drop-container h1 {
+        padding: 32px;
+        font-size: clamp(var(--H6), 3.4783vw + 0.3043rem, 3.711rem);
+    }
+    
+    .first-drop-container h1 {
+        padding: 0 0 32px 0;
+        font-size: clamp(var(--H6), 3.4783vw + 0.3043rem, 3.711rem);
+    }
+
+    
+
+}
+
+@media (max-width: 425px) {
+    .Second_drop,
+    .first_drop
+    {
+    padding: 0 1rem;
+    }
+
+    .Second-drop-container {
+        padding: 0 0 32px 0;
+    }
+
+    .second_drop_items,
+    .first_drop_items {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    }
+
+    .products .prod-name {
+        font-size: clamp(1rem, 3.4783vw + 0.3043rem, var(--H5));
+    }
+}

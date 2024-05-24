@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #783E98;
+    --secodary-color: #31419A;
+    --dark-color: #151123;
+    --black: #19171A;
+    --black25: #C7C8C9;
+    --black10: #E9EAEA;
+    --gradient: linear-gradient(to right, var(--secodary-color), var(--primary-color));
+
+
+
+    --H1: 7.419rem;
+    --H2: 5.247rem;
+    --H3: 3.711rem;
+    --H4: 2.624rem;
+    --H5: 1.856rem;
+    --H6: 1.313rem
+}
+
+.footer-container {
+    background: var(--gradient);
+}
+
+.Footer-flex {
+    max-width: 1440px;
+    margin: 0 auto auto auto;
+    padding: 96px 96px;
+    gap: 16px 32px;
+    display: flex;
+    vertical-align: top;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.Footer-Logo-Wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Footer-Logo-Wrapper img {
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.social-icons div {
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    border-radius: 100vmax;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 25%);
+    background: var(--black10);
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons div:hover {
+    transform: scale(1.1);
+    background: var(--dark-color);
+}
+
+.social-icons div:hover i,
+.social-icons div:hover p {
+    color: var(--black10);
+    transform: translateY(-20%);
+}
+
+.social-icons div:hover img {
+    filter: invert(100%);
+    transform: translateY(-20%);
+}
+
+.social-icons div i {
+    font-size: 24px;
+    transition: all 0.3s ease;
+    color: var(--dark-color);
+}
+
+.social-icons div img {
+    height: 29px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icons div p {
+    font-family: Poppins, Arial;
+    font-weight: 700;
+}
+
+.quick-links {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.partner {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.partner h1 {
+    font-size: clamp(var(--H6), 3.4783vw + 0.3043rem, var(--H5));
+    font-family: Cairo, Arial;
+    color: var(--black10);
+    text-transform: uppercase;
+}
+
+.partner button {
+    border: none;
+    font-size: clamp(0.9rem, 3.4783vw + 0.3043rem, 1rem);
+    font-family: Poppins, Arial;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 8px 16px;
+    color: var(--black10);
+    cursor: pointer;
+    background: var(--dark-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 25%);
+    transition: all 0.3s ease-in-out;
+}
+
+.partner button:hover {
+    transform: scale(1.1);
+    background: var(--secodary-color);
+}
+
+.quick-links h1 {
+    font-size: clamp(var(--H6), 3.4783vw + 0.3043rem, var(--H5));
+    font-family: Cairo, Arial;
+    color: var(--black10);
+    text-transform: uppercase;
+}
+
+.quick-links ul li {
+    font-weight: 300;
+    font-family: Poppins, Arial;
+    font-size: clamp(0.9rem, 3.4783vw + 0.3043rem, 1rem);
+    transition: all 0.3s ease;
+}
+
+.quick-links ul li:hover {
+    color: var(--dark-color);
+    border-bottom: 1px var(--black);
+    transform: scale(1.1);
+}
+
+.copy-rights {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 8px 96px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.copy-rights p {
+    font-family: Poppins, Arial;
+    color: var(--black25);
+    font-size: clamp(0.9rem, 3.4783vw + 0.3043rem, 1rem);
+    font-weight: 400;
+}
+
+
+/*Responsive*/
+
+@media (max-width: 1024px) {
+    .Footer-flex {
+        padding: 64px 64px;
+    }
+}
+
+@media (max-width: 815px) {
+    .copy-rights {
+        justify-content: center;
+    }
+
+    .Footer-flex {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+    .Footer-flex {
+        max-width: 1440px;
+        margin: 40px auto 0 auto;
+        padding: 32px 32px;
+    }
+
+    .copy-rights {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 8px 32px;
+        justify-content: center;
+    }
+
+    .copy-rights p {
+        font-size: clamp(0.8rem, 3.4783vw + 0.3043rem, 0.5rem);
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 425px) {
+    
+}

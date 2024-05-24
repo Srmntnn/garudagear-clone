@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --primary-color: #783E98;
+    --secodary-color: #31419A;
+    --dark-color: #151123;
+    --black25: #C7C8C9;
+    --black10: #E9EAEA;
+    --gradient: linear-gradient(to right, var(--secodary-color), var(--primary-color));
+
+    --H1: 7.419rem;
+    --H2: 5.247rem;
+    --H3: clamp(1.856rem, 3.4783vw + 0.3043rem, 3.711rem);
+    --H4: 2.624rem;
+    --H5: 1.856rem;
+    --H6: 1.313rem
+}
+
+.Faqs-contents {
+    background-color: var(--dark-color);
+}
+
+.faqs-wrapper {
+    width: 100%;
+    background: var(--gradient);
+}
+
+.page-title {
+    font-size: clamp(var(--H5), 3.4783vw + 0.3043rem, 3.711rem);
+    font-weight: 700;
+    color: var(--black10);
+    padding: 96px 96px;
+    text-transform: uppercase;
+    font-family: Cairo, Arial;
+    text-align: center;
+}
+
+.faqs-container {
+    max-width: 1440px;
+    padding: 96px 96px ;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.question-answer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.question-answer h1 {
+    color: var(--black10);
+    font-size: clamp(1rem, 3.4783vw + 0.3043rem, 1.856rem);
+    font-family: Cairo, Arial;
+}
+
+.question-answer p {
+    color: var(--black25);
+    font-size: clamp(0.9, 3.4783vw + 0.3043rem, 1.313rem);
+    font-family: Poppins, Arial;
+    padding: 0 32px;
+}
+
+.separete-answer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.separete-answer .bullets li{
+    padding: 0 16px;
+    list-style-type: circle;
+    color: var(--black25);
+    font-size: clamp(0.9, 3.4783vw + 0.3043rem, 1.313rem);
+    font-family: Poppins, Arial;
+    padding: 0 32px;
+    gap: 8px;
+}
+
+
+/*Responsive*/
+
+@media (max-width: 1024px) {
+
+    .page-title {
+        padding: 64px 64px;
+    }
+    
+    .faqs-container {
+        padding: 64px 64px;
+    }
+}
+
+@media (max-width: 815px) {
+    
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+    .page-title {
+        padding: 32px 16px 32px 16px;
+    }
+
+    .faqs-container {
+        padding: 32px 32px 64px 32px;
+    }
+
+
+}
+
+@media (max-width: 425px) {
+    .question-answer p {
+        font-size: 0.9rem;
+        padding: 0;
+    }
+    
+    .separete-answer .bullets li{
+        font-size: 0.9rem;
+    }
+
+    .separete-answer .bullets li {
+        padding: 0;
+        font-size: 0.8rem;
+    }
+
+    .faqs-container {
+        padding: 32px 16px 0 16px;
+    }
+
+}

@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --primary-color: #783E98;
+    --secodary-color: #31419A;
+    --dark-color: #151123;
+    --black25: #C7C8C9;
+    --black10: #E9EAEA;
+    --gradient: linear-gradient(to right, var(--secodary-color), var(--primary-color));
+
+    --H1: 7.419rem;
+    --H2: 5.247rem;
+    --H3: 3.711rem;
+    --H4: 2.624rem;
+    --H5: 1.856rem;
+    --H6: 1.313rem
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    align-items: center;
+    place-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-container .title,
+.signup-container .title {
+    padding: 32px 0;
+    width: 100%;
+    font-size: clamp(var(--H5), 3.4783vw + 0.3043rem, var(--H3));
+    background: var(--gradient);
+    text-transform: uppercase;
+    font-family: Cairo, Arial;
+    text-align: center;
+}
+
+.form-group-container {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.form-group {
+    font-size: clamp(0.9rem, 1.0774 + 3.793vw, 1.25rem);
+    position: relative;
+    
+}
+
+.input {
+    all: inherit;
+    color: var(--black10);
+    padding: 1rem 1rem;
+    border: solid 2px var(--primary-color);
+    font-weight: Poppins, Arial;
+    border-radius: 8px;
+    width: 100%;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: Poppins, Arial;
+    color: var(--black25);
+    pointer-events: none;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus {
+    border: solid 2px var(--secodary-color);
+    background: transparent;
+}
+
+.input:is(:focus, :valid) ~ label{
+    transform: 
+        translateY(-118%)
+        scale(0.7);
+        color: var(--secodary-color);
+    background: var(--dark-color);
+    padding-inline: 0.2rem;
+    font-size: 0.9rem;
+} 
+
+.account-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    width: 100%;
+    border: solid 0.5px var(--primary-color);
+    padding: 2rem 1rem;
+    height: 100%;
+}
+
+.account-wrapper .account-title {
+    font-size: clamp(var(--H6), 3.4783vw + 0.3043rem, var(--H5));
+    font-family: Cairo, Arial;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    margin: 64px auto 64px auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 500px));
+}
+.illus-cont {
+    height: 100%;
+}
+
+.container .ill-image {
+    width: 100%;
+    height: 100%;
+    padding: 64px 40px;
+    background: var(--gradient);
+    display: block;
+}
+
+.form-group1 {
+    width: 100%;
+    display: flex;
+    padding: 32px 0 16px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox input[type="checkbox"] {
+    background-color: var(--secodary-color);
+}
+
+.form-group1 input,
+.form-group1 label {
+    color: var(--black10);
+    font-family: Poppins, Arial;
+    font-size: 0.9rem;
+}
+
+.Login-btn {
+    border: none;
+    background-color: var(--primary-color);
+    padding: 12px 64px;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 25%);
+    transition: all 0.3s ease;
+}
+
+.Login-btn:hover {
+    transform: scale(1.1);
+}
+
+.Login-btn span {
+    font-family: Poppins, Arial;
+    color: var(--black10);
+}
+
+.account-bottom {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.account-bottom span {
+    font-size: 0.8rem;
+    font-family: Poppins, Arial;
+    color: var(--black10);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.account-bottom span .signup-link {
+    font-size: 0.9rem;
+    color: var(--secodary-color);
+}
+
+.account-bottom .or {
+    color: var(--black25);
+    font-weight: 600;
+    font-size: 0.7rem;
+}
+
+.Google-btn img {
+    width: 26px;
+}
+
+.account-bottom .Google-btn {
+    font-family: Poppins, Arial;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    align-items: center;
+    padding: 8px 16px;
+    background: var(--gradient);
+    border-radius: 6px;
+    border: none;
+    color: var(--black10);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 25%);
+    transition: all 0.3s ease;
+}
+
+.account-bottom .Google-btn:hover {
+    transform: scale(1.1);
+}
+
+.signup-btn {
+    border: none;
+    background-color: var(--primary-color);
+    padding: 12px 64px;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 25%);
+    transition: all 0.3s ease;
+    margin-top: 32px;
+}
+
+.signup-btn:hover {
+    transform: scale(1.1);
+}
+
+.signup-btn span {
+    font-family: Poppins, Arial;
+    color: var(--black10);
+}
+
+.error-message {
+    position: relative;
+    width: 100%;
+}
+
+.error-message .Error-msg {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    margin-top: 6px;
+    font-size: 0.9rem;
+    font-family: Poppins, Arial;
+    justify-content: center;
+    align-items: center;
+    color: rgb(148, 48, 48);
+}
+
+/*Responsive*/
+
+@media (max-width: 1024px) {
+    
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 600px)
+{
+    .container {
+        padding: 0 32px;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .form-group1 {
+        justify-content: center;
+    }
+}
